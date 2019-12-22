@@ -13,9 +13,9 @@
 h4{ line-height: 30px;
     word-spacing: 10px;
 font-size:17px;}
-div.left {position: fixed;float: left; width: 300px;}
-div.right {float: right; width: 700px;}
-div.all {width: 1000px;}
+div.left {position: fixed;float: left; width: 25%;}
+div.right {float: left; width: 60%; margin-left:20%;}
+div.all {width: 100%;}
 img {
 opacity:1;
 -moz-opacity:1;
@@ -23,14 +23,6 @@ filter: alpha(opacity=100) black;
 -khtml-opacity: 1;
 background-color:#000;
 }
-img {
-opacity:1;
--moz-opacity:1;
-filter: alpha(opacity=100) black;
--khtml-opacity: 1;
-background-color:#000;
-}
-
 img:hover {
 opacity:0.8;
 -moz-opacity:0.8;
@@ -50,4 +42,140 @@ background-color:#000;
 <a href="video.html"><img src="video.png"  style=" width: 50%; margin-top: 1%; margin-left: 10% " ></a><br>
 <a href="http://s-admin.forum2x2.ru/"><img src="forum.png"  style=" width: 50%; margin-top: 1%; margin-left: 10% "></a><br>
 <a href="materials.html"><img src="materials.png"  style=" width: 50%; margin-top: 1%; margin-left: 10%; " ></a></div>
+<div class="right"><h1>Проверь себя</h1>
+<h4>С помощью этого теста Вы сможете узнать, подходит ли Вам работа системного администратора.<br>Из предложенных ответов выберите наиболее подходящий для Вас и введите букву в поле для ответа.
+</h4>
+<h4>1. Столкнувшись с проблемой, Вы: <br>А. С готовностью беретесь за решение всех возникающих вопросов, даже если это займет много времени<br>
+Б. Сначала пытаетесь решить проблему, однако быстро опускаете руки  случае неудачи<br>В. Сразу же обращаетесь к кому-либо за помощью<br>
+<input type="text" id="z_1"></h4>
+<h4>2. Вы тщетно пытаетесь объяснить коллеге принцип действия программы, Ваши действия:<br>
+А. Буду пытаться объяснять более простым языком, пока не добьюсь его полного понимания сути задачи<br>
+Б. Если все попытки объяснить безрезультатны, посоветую ему воспользоваться Интернетом<br>
+В. Не умею объяснять сложные вещи простым языком, быстро выхожу из себя<br>
+<input type="text" id="z_2"></h4>
+<br>
+<h4>3. Вы разбираетесь в компьютерах и технике?<br>
+А. Да! Могу подолгу копаться в проводах и микросхемах<br>
+Б. Немного разбираюсь в этом, однако починить компьютер не смогу<br>
+В. Нет, меня это не интересует<br>
+<input type="text" id="z_3">  </h4>
+<h4>4. Вы креативный человек? <br>
+А. Да, люблю искать новые решения<br>
+Б. Иногда мне легче найти ответ на вопрос в Интернете, чем думать самому <br>
+В. Нет, пользуюсь тем, что было придумано до меня<br>
+<input type="text" id="z_4"></h4>
+<h4>5. Вам легко находить общий язык с людьми? <br>
+А. Да, я очень коммуникабельный человек<br>
+Б. Если человек предрасположен к общению, то да. Если же он щзол или раздражен, предпочту избежать разговора <br>
+В. Я интроверт: предпочитаю работать в одиночестве<br>
+<input type="text" id="z_5"></h4>
+<h4>6. Вы знаете английския язык? <br>
+А. Владею английским в совершенстве<br>
+Б. Иногда пользуюсь онлайн-переводчиком, однако суть текста понять могу <br>
+В. Знаю только пару бытовых фраз<br>
+<input type="text" id="z_6"></h4>
+<h4>7. На работе у Вас скопилось много незавершенных дел, в это время Вас просят о помощи. Ваши действия: <br>
+А. Постараюсь сделать все возможное, чтобы решить проблему коллеги<br>
+Б. Помогу, если это займет немного времени <br>
+В. Скорее всего откажу, сказав, что у меня много дел<br>
+<input type="text" id="z_7"></h4>
+<h4>8. Вы читаете инструкции по эксплуатации техники?  <br>
+А. Да, тщательно разбираюсь в инструкции, прежде чем начать пользоваться техникой<br>
+Б. Не читаю инструкцию, если раньше у меня была подобная техника <br>
+В. Читаю инструкцию только в том случае, если при эксплуатации возникли неполадки<br>
+<input type="text" id="z_8"></h4>
+<h4>9. Вы умеете логически мыслить? <br>
+А. Да, всегда четко вижу причину и следствие того или иного события<br>
+Б. Да, но иногда все же делаю ошибочные выводы <br>
+В. Нет, я не обладаю логическим складом ума<br>
+<input type="text" id="z_9"></h4>
+<h4>10. Вы ответственный человек? <br>
+А. Да, на меня можно положиться в любой ситуации<br>
+Б. Стараюсь всегда держать слово, однако не всегда это получается <br>
+В. Нет, я постоянно забываю то, что обещал сделать<br>
+<input type="text" id="z_10"></h4>
+<button onclick="proverit();" >Проверить</button>
+<div id="rezultat" style="margin-bottom:10%; margin-top: 5%;"></div></div></div>
+<script>
+function proverit(){
+otv_1 = document.getElementById('z_1').value;
+otv_2 = document.getElementById('z_2').value;
+otv_3 = document.getElementById('z_1').value;
+otv_4 = document.getElementById('z_1').value;
+otv_5 = document.getElementById('z_1').value;
+otv_6 = document.getElementById('z_1').value;
+otv_7 = document.getElementById('z_1').value;
+otv_8 = document.getElementById('z_1').value;
+otv_9 = document.getElementById('z_1').value;
+otv_10 = document.getElementById('z_1').value;
+sum = 0;
+if(otv_1 == "А"){
+sum +=2;
+}
+if(otv_1 == "Б"){
+sum +=1;
+}
+if(otv_2 == "А"){
+sum +=2;
+}
+if(otv_2 == "Б"){
+sum +=1;
+}
+if(otv_3 == "А"){
+sum +=2;
+}
+if(otv_3 == "Б"){
+sum +=1;
+}
+if(otv_4 == "А"){
+sum +=2;
+}
+if(otv_4 == "Б"){
+sum +=1;
+}
+if(otv_5 == "А"){
+sum +=2;
+}
+if(otv_5 == "Б"){
+sum +=1;
+}
+if(otv_6 == "А"){
+sum +=2;
+}
+if(otv_6 == "Б"){
+sum +=1;
+}
+if(otv_7 == "А"){
+sum +=2;
+}
+if(otv_7 == "Б"){
+sum +=1;
+}
+if(otv_8 == "А"){
+sum +=2;
+}
+if(otv_8 == "Б"){
+sum +=1;
+}
+if(otv_9 == "А"){
+sum +=2;
+}
+if(otv_9 == "Б"){
+sum +=1;
+}
+if(otv_10 == "А"){
+sum +=2;
+}
+if(otv_10 == "Б"){
+sum +=1;
+}
+if(sum>=16){document.getElementById('rezultat').innerHTML = "Поздравляем! Вы станете отличным системным администратором!"}
+if(sum>=11 && sum<16){document.getElementById('rezultat').innerHTML = "При должном усердии Вы можете стать системным администратором."}
+if(sum<11 && sum>=5){document.getElementById('rezultat').innerHTML = "Вам стоит немного поработать над собой, прежде чем стать системным администратором."}
+if(sum<5){document.getElementById('rezultat').innerHTML = "К сожалению, работа системного администратора не для Вас."}
+}
+</script>
+
+
+
 </body>
